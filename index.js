@@ -39,15 +39,10 @@ const dovolena = (osoba1, osoba2) => {
     }
   }
   else {
-    console.log("Bohužel nemůžete jet, chybí vám ještě " + (100000 - (uspory1 + uspory2)))
-    if (uspory1 < 50000) {
-      return `${jmeno1} musí ještě naspořit ${(50000 - uspory1)}`
-    }
-    if (uspory2 < 50000) {
-      return `${jmeno2} musí ještě naspořit ${(50000 - uspory2)}`
-    }
+    return `Bohužel nemůžete jet, chybí vám ještě ${(100000 - (uspory1 + uspory2))}. ${jmeno1} musí ještě naspořit ${(50000 - uspory1)} a ${jmeno2} musí ještě naspořit ${(50000 - uspory2)}.`
   }
 }
+
 dovolena(osoba1, osoba2)
 
 const test1 = () => {
